@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --cream: #fff7ea;
+    --cream: #f9f4ee;
     --lys: #f4e5cf;
     --gull: #c98a3b;
     --brun: #4a2c1c;
@@ -36,4 +36,46 @@ h3 {
 p {
     font-size: 16px;
     line-height: 1.8;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.logo {
+    width: 200px;
+    border-radius: 30%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--brun);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+nav a:hover {
+    color: var(--gull);
 }
