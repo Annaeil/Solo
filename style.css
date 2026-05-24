@@ -47,7 +47,7 @@ p {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .logo {
@@ -127,4 +127,65 @@ nav a:hover {
 
 .knapp:hover {
     background-color: var(--brun);
+}
+
+#s1{
+    margin-top: 100px;
+}
+
+.tittel-boks {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.tittel-boks h2{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.kort-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.kort {
+    background: var(--white);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.kort:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    transform: translateY(-3px);
+}
+
+.kort img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.kort-body {
+    padding: 28px 32px 32px;
+}
+
+.kort-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
+.kort-body p {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-weight: 300;
 }
