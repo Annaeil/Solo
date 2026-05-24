@@ -56,11 +56,11 @@ p {
 
 .liten-tekst {
     text-transform: uppercase;
-    letter-spacing: 3px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 100;
     color: var(--gull);
     margin-bottom: 15px;
+    letter-spacing: 6px;
 }
 
 .knapp {
@@ -75,7 +75,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 3px;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .knapp:hover {
@@ -255,7 +255,6 @@ section {
 }
 
 .s2-innhold .liten-tekst {
-    letter-spacing: 6px;
     margin-bottom: 20px;
 }
 
