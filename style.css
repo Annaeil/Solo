@@ -41,15 +41,13 @@ p {
 .container {
     max-width: 1100px;
     margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -60,7 +58,7 @@ p {
 nav ul {
     display: flex;
     align-items: center;
-    gap: 65px;
+    gap: 70px;
 }
 
 nav li {
@@ -78,4 +76,54 @@ nav a {
 
 nav a:hover {
     color: var(--gull);
+}
+
+.hero {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url(media/bakeovn.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-innhold {
+    padding-top: 150px;
+    color: var(--hvit);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hero-innhold h1 {
+    font-size: 68px;
+    line-height: 1.05;
+}
+
+.hero-innhold p {
+    max-width: 600px;
+}
+
+.liten-tekst {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gull);
+}
+
+
+.knapp {
+    background-color: var(--gull);
+    color: var(--cream);
+    text-decoration: none;
+    border: none;
+    padding: 15px 28px;
+    width: fit-content;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.knapp:hover {
+    background-color: var(--brun);
 }
