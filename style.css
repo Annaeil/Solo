@@ -7,17 +7,22 @@
     --brun: #4a2c1c;
     --mork: #17110d;
     --hvit: #ffffff;
+
+    --skygge: 0 2px 16px rgba(0, 0, 0, 0.06);
+    --skygge-hover: 0 8px 32px rgba(0, 0, 0, 0.13);
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -26,23 +31,58 @@ body {
     color: var(--brun);
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 h1,
 h2,
 h3 {
     font-family: "Playfair Display", serif;
 }
 
-
 p {
     font-size: 16px;
     line-height: 1.8;
 }
 
+/* Felles klasser */
 .container {
     max-width: 1100px;
-    margin: auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
+.liten-tekst {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gull);
+    margin-bottom: 15px;
+}
+
+.knapp {
+    display: inline-block;
+    background-color: var(--gull);
+    color: var(--cream);
+    text-decoration: none;
+    border: none;
+    padding: 15px 28px;
+    width: fit-content;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.knapp:hover {
+    background-color: var(--brun);
+}
+
+/* Header */
 .navbar {
     display: flex;
     align-items: center;
@@ -58,7 +98,9 @@ p {
 nav ul {
     display: flex;
     align-items: center;
-    gap: 70px;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -78,13 +120,15 @@ nav a:hover {
     color: var(--gull);
 }
 
+/* Hero */
 .hero {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url(media/bakeovn.jpeg);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)),
+        url(media/bakeovn.jpeg);
     background-size: cover;
     background-position: center;
 }
-
 
 .hero-innhold {
     padding-top: 150px;
@@ -103,64 +147,43 @@ nav a:hover {
     max-width: 600px;
 }
 
-.liten-tekst {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--gull);
-}
-
-
-.knapp {
-    background-color: var(--gull);
-    color: var(--cream);
-    text-decoration: none;
-    border: none;
-    padding: 15px 28px;
-    width: fit-content;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    border-radius: 5px;
-}
-
-.knapp:hover {
-    background-color: var(--brun);
-}
-
-#s1{
+/* Seksjoner */
+section {
     margin-top: 100px;
+}
+
+.hero {
+    margin-top: 0;
 }
 
 .tittel-boks {
     text-align: center;
     max-width: 650px;
-    margin: auto;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
 }
 
-.tittel-boks h2{
+.tittel-boks h2 {
     font-size: 42px;
     margin-bottom: 15px;
 }
 
+/* Kort */
 .kort-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
 }
 
 .kort {
-    background: var(--white);
+    background: var(--hvit);
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    box-shadow: var(--skygge);
     transition: box-shadow 0.25s, transform 0.25s;
 }
 
 .kort:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    box-shadow: var(--skygge-hover);
     transform: translateY(-3px);
 }
 
@@ -178,31 +201,34 @@ nav a:hover {
     font-size: 26px;
     font-weight: 600;
     margin-bottom: 12px;
-    color: var(--dark);
+    color: var(--mork);
 }
 
 .kort-body p {
     font-size: 15px;
-    line-height: 1.7;
-    margin-bottom: 24px;
     font-weight: 300;
+    margin-bottom: 24px;
 }
 
+/* Bilde-seksjon */
 #s2 {
     position: relative;
     height: 520px;
     overflow: hidden;
-    margin-top: 100px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-
-#s2 img {
+#s2 img,
+#s2::after {
     position: absolute;
     inset: 0;
+}
+
+#s2 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -211,8 +237,6 @@ nav a:hover {
 
 #s2::after {
     content: "";
-    position: absolute;
-    inset: 0;
     background: rgba(0, 0, 0, 0.55);
     z-index: 2;
 }
@@ -222,29 +246,59 @@ nav a:hover {
     z-index: 3;
     max-width: 800px;
     padding: 40px;
-    color: white;
+    color: var(--hvit);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.liten-tekst {
-    text-transform: uppercase;
+.s2-innhold .liten-tekst {
     letter-spacing: 6px;
-    font-size: 14px;
-    font-weight: 700;
     margin-bottom: 20px;
-}
-
-.brun {
-    color: #c8aa6e;
 }
 
 .s2-innhold h2 {
     font-size: 56px;
-    margin: 0 0 20px;
-    font-family: Georgia, serif;
-    color: white;
+    margin-bottom: 20px;
+    color: var(--hvit);
 }
 
 .s2-innhold p {
-    font-weight: 100;
+    max-width: 720px;
+    font-weight: 300;
     margin-bottom: 40px;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 22px;
+    }
+
+    nav a {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .hero-innhold {
+        padding-top: 100px;
+    }
+
+    .hero-innhold h1 {
+        font-size: 46px;
+    }
+
+    .kort-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #s2 {
+        height: 480px;
+    }
+
+    .s2-innhold h2 {
+        font-size: 38px;
+    }
 }
