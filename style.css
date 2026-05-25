@@ -281,7 +281,7 @@ section {
 
 .organisk-form {
     position: absolute;
-    background-color:var(--beige) ;
+    background-color: var(--beige);
     border-radius: 45% 55% 60% 40%;
     z-index: 1;
 }
@@ -302,6 +302,51 @@ section {
     transform: rotate(18deg);
 }
 
+
+.morten {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.morten-bilde {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+.morten-tekst {
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 45px;
+    border-top-left-radius: 85px;
+    border-bottom-right-radius: 85px;
+}
+
+.morten-tekst h2 {
+    font-size: 46px;
+    line-height: 1.15;
+    color: var(--mork);
+    margin-bottom: 25px;
+}
+
+.morten-tekst p {
+    font-weight: 300;
+    margin-bottom: 22px;
+    max-width: 540px;
+}
+
+.quote {
+    margin: 35px 0;
+    padding-left: 25px;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--gull);
+    border-left: 3px solid var(--gull);
+}
 
 
 /* Mobil */
@@ -333,5 +378,22 @@ section {
 
     .s2-innhold h2 {
         font-size: 38px;
+    }
+
+    .morten {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .morten-bilde {
+        height: 340px;
+    }
+
+    .morten-tekst {
+        padding: 30px;
+    }
+
+    .morten-tekst h2 {
+        font-size: 34px;
     }
 }
