@@ -191,6 +191,131 @@ section {
     margin-top: 0;
 }
 
+.oppskrift-section {
+    background-color: var(--lys);
+    padding: 110px ;
+}
+
+.oppskrift-topp {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 60px;
+}
+
+.oppskrift-topp h2 {
+    font-size: 50px;
+    color: var(--mork);
+    margin-bottom: 18px;
+}
+
+.oppskrift-topp p {
+    font-weight: 300;
+}
+
+.oppskrift-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 38px;
+    align-items: start;
+}
+
+.oppskrift-kort {
+    background-color: var(--beige);
+    padding: 42px;
+    border-radius: 18px;
+    box-shadow: var(--skygge);
+    min-height: 1150px;
+}
+
+.ingredienser {
+    background-color: var(--cream);
+}
+
+.kort-heading {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.kort-heading span {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    color: var(--gull);
+    line-height: 1;
+}
+
+.kort-heading h3 {
+    font-size: 34px;
+    color: var(--mork);
+}
+
+.oppskrift-kort h4 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: var(--brun);
+    margin: 30px 0 15px;
+}
+
+.sjekkliste,
+.stegliste {
+    list-style: none;
+}
+
+.sjekkliste li,
+.stegliste li {
+    position: relative;
+    padding: 15px 16px 15px 46px;
+    margin-bottom: 12px;
+    background-color: rgba(249, 244, 238, 0.8);
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 1.7;
+
+}
+
+.sjekkliste li::before,
+.stegliste li::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 21px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--gull);
+    border-radius: 50%;
+}
+
+.sjekkliste li:hover,
+.stegliste li:hover {
+    background-color: #f1e4d1;
+}
+
+.sjekkliste li.ferdig,
+.stegliste li.ferdig {
+    color: rgba(74, 44, 28, 0.5);
+    text-decoration: line-through;
+    background-color: #ead8bd;
+}
+
+.sjekkliste li.ferdig::before,
+.stegliste li.ferdig::before {
+    background-color: var(--gull);
+    box-shadow: inset 0 0 0 3px #ead8bd;
+}
+
+
+.stegliste li {
+    padding-left: 58px;
+}
+
+
+.stegliste li.ferdig::after {
+    color: var(--hvit);
+}
+
+
 .tittel-boks {
     text-align: center;
     max-width: 650px;
@@ -340,33 +465,28 @@ section {
         font-size: 46px;
     }
 
-    .kort-grid {
+        .oppskrift-section {
+        padding: 75px 0;
+    }
+
+    .oppskrift-topp h2 {
+        font-size: 36px;
+    }
+
+    .oppskrift-layout {
         grid-template-columns: 1fr;
     }
 
-    #s2 {
-        height: 480px;
-    }
-
-    .s2-innhold h2 {
-        font-size: 38px;
-    }
-
-    .morten {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .morten-bilde {
-        height: 340px;
-    }
-
-    .morten-tekst {
+    .oppskrift-kort {
         padding: 30px;
     }
 
-    .morten-tekst h2 {
-        font-size: 34px;
+    .kort-heading h3 {
+        font-size: 28px;
+    }
+
+    .kort-heading span {
+        font-size: 40px;
     }
 
 
