@@ -277,6 +277,7 @@ section {
     background-color: var(--lys);
     min-height: 100vh;
     overflow: hidden;
+    padding-bottom: 200px;
 }
 
 .organisk-form {
@@ -349,53 +350,58 @@ section {
 }
 
 .footer {
-    background-color: var(--lys);
-    color: var(--brun);
-    padding: 65px 0 25px;
-    border-top: 1px solid rgba(74, 44, 28, 0.15);
+    background-color: var(--cream);
+    padding: 55px 0 25px;
+}
+
+.footer-wrap {
+    width: 92%;
+    max-width: 1450px;
+    margin: 0 auto;
 }
 
 .footer-top {
     text-align: center;
-    margin-bottom: 45px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(74, 44, 28, 0.12);
 }
 
 .footer-logo {
-    width: 150px;
-    border-radius: 30%;
+    width: 130px;
+    border-radius: 24px;
     margin: 0 auto 20px;
 }
 
 .footer-slagord {
     font-family: "Playfair Display", serif;
-    font-size: 24px;
+    font-size: 26px;
+    font-weight: 600;
     color: var(--mork);
 }
 
 .footer-innhold {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
-    gap: 45px;
-    padding: 45px 0;
-    border-top: 1px solid rgba(74, 44, 28, 0.12);
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 60px;
+    padding: 55px 0;
     border-bottom: 1px solid rgba(74, 44, 28, 0.12);
 }
 
 .footer-kolonne h3 {
-    font-size: 22px;
-    margin-bottom: 18px;
+    font-size: 24px;
     color: var(--mork);
+    margin-bottom: 18px;
 }
 
 .footer-kolonne p,
 .footer-kolonne a {
     display: block;
-    font-size: 14px;
-    line-height: 1.8;
-    font-weight: 300;
-    color: var(--brun);
     text-decoration: none;
-    margin-bottom: 6px;
+    color: var(--brun);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.9;
+    margin-bottom: 4px;
 }
 
 .footer-kolonne a:hover {
@@ -405,13 +411,13 @@ section {
 .footer-bunn {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    padding-top: 25px;
+    align-items: center;
+    padding-top: 22px;
 }
 
 .footer-bunn p {
-    font-size: 13px;
-    color: rgba(74, 44, 28, 0.65);
+    font-size: 14px;
+    color: rgba(74, 44, 28, 0.7);
 }
 
 
