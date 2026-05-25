@@ -348,6 +348,72 @@ section {
     border-left: 3px solid var(--gull);
 }
 
+.footer {
+    background-color: var(--lys);
+    color: var(--brun);
+    padding: 65px 0 25px;
+    border-top: 1px solid rgba(74, 44, 28, 0.15);
+}
+
+.footer-top {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.footer-logo {
+    width: 150px;
+    border-radius: 30%;
+    margin: 0 auto 20px;
+}
+
+.footer-slagord {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: var(--mork);
+}
+
+.footer-innhold {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 45px;
+    padding: 45px 0;
+    border-top: 1px solid rgba(74, 44, 28, 0.12);
+    border-bottom: 1px solid rgba(74, 44, 28, 0.12);
+}
+
+.footer-kolonne h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+    color: var(--mork);
+}
+
+.footer-kolonne p,
+.footer-kolonne a {
+    display: block;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: var(--brun);
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+.footer-kolonne a:hover {
+    color: var(--gull);
+}
+
+.footer-bunn {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 25px;
+}
+
+.footer-bunn p {
+    font-size: 13px;
+    color: rgba(74, 44, 28, 0.65);
+}
+
 
 /* Mobil */
 @media (max-width: 768px) {
