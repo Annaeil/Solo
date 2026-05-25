@@ -284,3 +284,115 @@ nav a:hover::after {
         display: inline-block;
     }
 }
+
+.spill-section {
+    background-color: var(--lys);
+    padding: 100px 0;
+}
+
+.spill-topp {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.spill-topp h1 {
+    font-size: 56px;
+    color: var(--mork);
+    margin-bottom: 18px;
+}
+
+.spill-topp p {
+    font-weight: 300;
+}
+
+.spill-kort {
+    background-color: var(--cream);
+    border-radius: 22px;
+    box-shadow: var(--skygge);
+    overflow: hidden;
+}
+
+.spill-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 35px;
+    background-color: var(--hvit);
+    border-bottom: 1px solid rgba(74, 44, 28, 0.12);
+}
+
+.spill-info p {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: var(--mork);
+}
+
+.spill-info span {
+    color: var(--gull);
+}
+
+#spillflate {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+    background-color: var(--cream);
+}
+
+.startboks {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(23, 17, 13, 0.78);
+    color: var(--cream);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    text-align: center;
+    padding: 30px;
+}
+
+.startboks h2 {
+    font-size: 46px;
+    margin-bottom: 15px;
+}
+
+.startboks p {
+    max-width: 420px;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.spill-figur {
+    position: absolute;
+    top: -90px;
+    width: 85px;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.spill-figur:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .spill-topp h1 {
+        font-size: 40px;
+    }
+
+    .spill-info {
+        padding: 20px;
+    }
+
+    .spill-info p {
+        font-size: 22px;
+    }
+
+    #spillflate {
+        height: 440px;
+    }
+
+    .spill-figur {
+        width: 70px;
+    }
+}
