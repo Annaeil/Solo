@@ -451,18 +451,63 @@ section {
 .footer-bunn p {
     font-size: 14px;
     color: rgba(74, 44, 28, 0.7);
+}.burger-knapp {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
+.burger,
+.kryss {
+    font-size: 30px;
+    color: var(--brun);
+}
 
-/* Mobil */
+.kryss {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    nav ul {
-        gap: 22px;
+    .navbar {
+        position: relative;
     }
 
-    nav a {
-        font-size: 14px;
-        letter-spacing: 2px;
+    .burger-knapp {
+        display: block;
+        position: absolute;
+        left: 5%;
+        top: 35px;
+        z-index: 5;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .navbar.active nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        width: 100%;
+        background-color: var(--cream);
+        padding: 35px 0 45px;
+        margin-top: 10px;
+        border-top: 1px solid rgba(74, 44, 28, 0.12);
+        border-bottom: 1px solid rgba(74, 44, 28, 0.12);
+    }
+
+    .navbar.active .burger {
+        display: none;
+    }
+
+    .navbar.active .kryss {
+        display: inline-block;
     }
 
     .hero-innhold {
@@ -501,4 +546,6 @@ section {
     .morten-tekst h2 {
         font-size: 34px;
     }
+
+
 }
