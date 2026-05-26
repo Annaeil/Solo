@@ -354,9 +354,13 @@ section {
 
 .morten-tekst {
     background-color: rgba(255, 255, 255, 0.45);
-    padding: 45px;
-    border-top-left-radius: 85px;
-    border-bottom-right-radius: 85px;
+    padding: 50px;
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+.morten-tekst .liten-tekst {
+    padding-top: 20px;
 }
 
 .morten-tekst h2 {
@@ -451,7 +455,9 @@ section {
 .footer-bunn p {
     font-size: 14px;
     color: rgba(74, 44, 28, 0.7);
-}.burger-knapp {
+}
+
+.burger-knapp {
     display: none;
     cursor: pointer;
     background: none;
