@@ -311,10 +311,6 @@ section {
 }
 
 
-.stegliste li.ferdig::after {
-    color: var(--hvit);
-}
-
 
 .tittel-boks {
     text-align: center;
